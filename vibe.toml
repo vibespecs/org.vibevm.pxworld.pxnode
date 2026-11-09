@@ -1,0 +1,340 @@
+# Rendered by org.vibevm.pxworld/vibevm-package-generator 1.0.0 (vibevm-generate-package-pxworld). Do not edit.
+# input: none — the wrapper downloads nothing and has nothing to checksum
+# re-render: vibevm-generate-package-pxworld pxnode --version 1.0.0 > vibe.toml
+[package]
+name = "pxnode"
+group = "org.vibevm.pxworld"
+kind = "app"
+version = "1.0.0"
+epoch = 1
+format = "normal"
+authors = ["Oleg Chirukhin"]
+license = "UPL-1.0"
+description = "pxworld wrappers for Node.js: pxnode, pxnpm and pxnpx run the node, npm and npx already on PATH through the vibe-managed px"
+keywords = ["px", "proxy", "pxworld", "node", "npm", "corporate", "application"]
+
+[compatibility]
+min_vibe_version = "1.0.12"
+requires_kinds = []
+
+[application]
+id = "pxnode"
+keywords = ["px", "proxy", "node", "npm"]
+
+
+[[installer_options]]
+id = "linux-x64"
+name = "pxworld wrappers for Node.js 1.0.0"
+platform = "linux"
+platform_name = "Linux (glibc)"
+arch = "x86_64"
+arch_name = "Intel/AMD 64-bit"
+
+[[installer_options.steps]]
+id = "note"
+title = "Write the pxworld note into the application root"
+kind = "copy"
+from = "payload/README.md"
+to = "README.md"
+
+[[installer_options.launchers]]
+id = "pxnode"
+name = "pxnode"
+description = "The `node` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "node"]
+kind = "command"
+default = true
+
+[[installer_options.launchers]]
+id = "pxnpm"
+name = "pxnpm"
+description = "The `npm` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npm"]
+kind = "command"
+
+[[installer_options.launchers]]
+id = "pxnpx"
+name = "pxnpx"
+description = "The `npx` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npx"]
+kind = "command"
+
+[[installer_options.public_commands]]
+name = "pxnode"
+launcher = "pxnode"
+
+[[installer_options.public_commands]]
+name = "pxnpm"
+launcher = "pxnpm"
+
+[[installer_options.public_commands]]
+name = "pxnpx"
+launcher = "pxnpx"
+
+
+[[installer_options]]
+id = "linux-arm64"
+name = "pxworld wrappers for Node.js 1.0.0"
+platform = "linux"
+platform_name = "Linux (glibc)"
+arch = "aarch64"
+arch_name = "ARM 64-bit"
+
+[[installer_options.steps]]
+id = "note"
+title = "Write the pxworld note into the application root"
+kind = "copy"
+from = "payload/README.md"
+to = "README.md"
+
+[[installer_options.launchers]]
+id = "pxnode"
+name = "pxnode"
+description = "The `node` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "node"]
+kind = "command"
+default = true
+
+[[installer_options.launchers]]
+id = "pxnpm"
+name = "pxnpm"
+description = "The `npm` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npm"]
+kind = "command"
+
+[[installer_options.launchers]]
+id = "pxnpx"
+name = "pxnpx"
+description = "The `npx` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npx"]
+kind = "command"
+
+[[installer_options.public_commands]]
+name = "pxnode"
+launcher = "pxnode"
+
+[[installer_options.public_commands]]
+name = "pxnpm"
+launcher = "pxnpm"
+
+[[installer_options.public_commands]]
+name = "pxnpx"
+launcher = "pxnpx"
+
+
+[[installer_options]]
+id = "macos-x64"
+name = "pxworld wrappers for Node.js 1.0.0"
+platform = "macos"
+platform_name = "macOS"
+arch = "x86_64"
+arch_name = "Intel 64-bit"
+
+[[installer_options.steps]]
+id = "note"
+title = "Write the pxworld note into the application root"
+kind = "copy"
+from = "payload/README.md"
+to = "README.md"
+
+[[installer_options.launchers]]
+id = "pxnode"
+name = "pxnode"
+description = "The `node` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "node"]
+kind = "command"
+default = true
+
+[[installer_options.launchers]]
+id = "pxnpm"
+name = "pxnpm"
+description = "The `npm` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npm"]
+kind = "command"
+
+[[installer_options.launchers]]
+id = "pxnpx"
+name = "pxnpx"
+description = "The `npx` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npx"]
+kind = "command"
+
+[[installer_options.public_commands]]
+name = "pxnode"
+launcher = "pxnode"
+
+[[installer_options.public_commands]]
+name = "pxnpm"
+launcher = "pxnpm"
+
+[[installer_options.public_commands]]
+name = "pxnpx"
+launcher = "pxnpx"
+
+
+[[installer_options]]
+id = "macos-arm64"
+name = "pxworld wrappers for Node.js 1.0.0"
+platform = "macos"
+platform_name = "macOS"
+arch = "aarch64"
+arch_name = "Apple silicon"
+
+[[installer_options.steps]]
+id = "note"
+title = "Write the pxworld note into the application root"
+kind = "copy"
+from = "payload/README.md"
+to = "README.md"
+
+[[installer_options.launchers]]
+id = "pxnode"
+name = "pxnode"
+description = "The `node` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "node"]
+kind = "command"
+default = true
+
+[[installer_options.launchers]]
+id = "pxnpm"
+name = "pxnpm"
+description = "The `npm` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npm"]
+kind = "command"
+
+[[installer_options.launchers]]
+id = "pxnpx"
+name = "pxnpx"
+description = "The `npx` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npx"]
+kind = "command"
+
+[[installer_options.public_commands]]
+name = "pxnode"
+launcher = "pxnode"
+
+[[installer_options.public_commands]]
+name = "pxnpm"
+launcher = "pxnpm"
+
+[[installer_options.public_commands]]
+name = "pxnpx"
+launcher = "pxnpx"
+
+
+[[installer_options]]
+id = "windows-x64"
+name = "pxworld wrappers for Node.js 1.0.0"
+platform = "windows"
+platform_name = "Windows"
+arch = "x86_64"
+arch_name = "Intel/AMD 64-bit"
+
+[[installer_options.steps]]
+id = "note"
+title = "Write the pxworld note into the application root"
+kind = "copy"
+from = "payload/README.md"
+to = "README.md"
+
+[[installer_options.launchers]]
+id = "pxnode"
+name = "pxnode"
+description = "The `node` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "node"]
+kind = "command"
+default = true
+
+[[installer_options.launchers]]
+id = "pxnpm"
+name = "pxnpm"
+description = "The `npm` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npm"]
+kind = "command"
+
+[[installer_options.launchers]]
+id = "pxnpx"
+name = "pxnpx"
+description = "The `npx` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npx"]
+kind = "command"
+
+[[installer_options.public_commands]]
+name = "pxnode"
+launcher = "pxnode"
+
+[[installer_options.public_commands]]
+name = "pxnpm"
+launcher = "pxnpm"
+
+[[installer_options.public_commands]]
+name = "pxnpx"
+launcher = "pxnpx"
+
+
+[[installer_options]]
+id = "windows-arm64"
+name = "pxworld wrappers for Node.js 1.0.0"
+platform = "windows"
+platform_name = "Windows"
+arch = "aarch64"
+arch_name = "ARM 64-bit"
+
+[[installer_options.steps]]
+id = "note"
+title = "Write the pxworld note into the application root"
+kind = "copy"
+from = "payload/README.md"
+to = "README.md"
+
+[[installer_options.launchers]]
+id = "pxnode"
+name = "pxnode"
+description = "The `node` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "node"]
+kind = "command"
+default = true
+
+[[installer_options.launchers]]
+id = "pxnpm"
+name = "pxnpm"
+description = "The `npm` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npm"]
+kind = "command"
+
+[[installer_options.launchers]]
+id = "pxnpx"
+name = "pxnpx"
+description = "The `npx` on PATH, run through the vibe-managed px"
+executable = "command:vibe"
+args = ["tool", "px", "exec", "--env", "NODE_USE_ENV_PROXY=1", "--env", "NODE_USE_SYSTEM_CA=1", "--proxy-env", "npm_config_proxy", "--proxy-env", "npm_config_https_proxy", "--", "npx"]
+kind = "command"
+
+[[installer_options.public_commands]]
+name = "pxnode"
+launcher = "pxnode"
+
+[[installer_options.public_commands]]
+name = "pxnpm"
+launcher = "pxnpm"
+
+[[installer_options.public_commands]]
+name = "pxnpx"
+launcher = "pxnpx"
